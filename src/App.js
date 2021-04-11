@@ -70,23 +70,18 @@ const App = () => {
 
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-      },
+      headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(updTask),
     })
 
     const data = await res.json()
 
-    setTasks(
-      tasks.map((task) =>
-        task.id === id ? { ...task, reminder: data.reminder } : task
-      )
+    setTasks(tasks.map(task =>
+        task.id === id ? { ...task, reminder: data.reminder } : task)
     )
   }
 
-  return (
-    <Router>
+  return <Router>
       <div className='container'>
         <Header
           onAdd={() => setShowAddTask(!showAddTask)}
@@ -95,26 +90,24 @@ const App = () => {
         <Route
           path='/'
           exact
-          render={(props) => (
+          render={props => 
             <>
               {showAddTask && <AddTask onAdd={addTask} />}
-              {tasks.length > 0 ? (
-                <Tasks
+              {tasks.length > 0
+                ? <Tasks
                   tasks={tasks}
                   onDelete={deleteTask}
                   onToggle={toggleReminder}
                 />
-              ) : (
-                'No Tasks To Show'
-              )}
+                : 'No Tasks To Show'
+              }
             </>
-          )}
+          }
         />
         <Route path='/about' component={About} />
         <Footer />
       </div>
     </Router>
-  )
 }
 
 export default App
