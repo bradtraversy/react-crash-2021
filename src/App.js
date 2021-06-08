@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 import About from './components/About'
-
+ 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([])
@@ -86,6 +86,9 @@ const App = () => {
       )
     )
   }
+  const edit=(id,text,date)=>{
+    setTasks(tasks.map((task)=>task.id===id?{...task,text:text,date:date}:task));
+   }
 
   return (
     <Router>
@@ -105,6 +108,7 @@ const App = () => {
                   tasks={tasks}
                   onDelete={deleteTask}
                   onToggle={toggleReminder}
+                  edit={edit}
                 />
               ) : (
                 'No Tasks To Show'

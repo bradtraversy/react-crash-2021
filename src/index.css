@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} 
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -105,7 +105,16 @@ body {
   flex: 2;
   height: 20px;
 }
+.text-line {
+  background-color: transparent;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 
+  padding: 3px 10px;
+}
 footer {
   margin-top: 30px;
   text-align: center;
