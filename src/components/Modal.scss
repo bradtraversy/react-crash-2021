@@ -1,0 +1,84 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: 0.35);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .modal {
+      width: 30vw;
+      height: auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+  
+      background-color: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  
+      &_header {
+        position: relative;
+        border-bottom: 1px solid #dddddd;
+        &-title {
+          text-align: center;
+        }
+  
+        .close {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: transparent;
+  
+          img {
+            width: 1rem;
+            height: auto;
+            transition: all 0.3s;
+          }
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+  
+      &_content {
+        border-bottom: 1px solid #dddddd;
+        padding: 2rem 0;
+      }
+  
+      &_footer {
+        padding: 2rem 0;
+        padding-bottom: 0;
+  
+        button {
+          float: right;
+          padding: 0.5rem;
+  
+          border-radius: 8px;
+        }
+        .modal-close {
+          background-color: transparent;
+          font-weight: 600;
+  
+          &:hover {
+            color: rgba(54, 67, 72, 0.8);
+          }
+        }
+        .submit {
+          margin-right: 1rem;
+          background-color: #364348;
+          color: #fff;
+  
+          &:hover {
+            background-color: rgba(54, 67, 72, 0.8);
+          }
+        }
+      }
+    }
+  }
