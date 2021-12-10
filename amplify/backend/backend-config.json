@@ -1,0 +1,10 @@
+{
+  "function": {
+    "getSitesByCountryAndStream": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "api": {}
+}
