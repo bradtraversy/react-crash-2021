@@ -7,7 +7,8 @@
       "reminder": false,
       "work": false,
       "school": false,
-      "other": true
+      "other": true,
+      "important": false
     },
     {
       "id": 2,
@@ -16,12 +17,14 @@
       "reminder": true,
       "work": false,
       "school": true,
-      "other": false
+      "other": false,
+      "important": true
     },
     {
-      "text": "e",
-      "day": "eee",
-      "reminder": false,
+      "text": "hes",
+      "day": "yes",
+      "reminder": true,
+      "important": true,
       "work": true,
       "school": false,
       "other": false,
