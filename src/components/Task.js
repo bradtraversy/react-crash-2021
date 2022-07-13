@@ -15,7 +15,7 @@ const Task = ({ task, onDelete, onToggle }) => {
 
   return (
     <div
-      className={`task ${task.reminder && 'reminder'}`}
+      className={`task ${cName}`}
       onDoubleClick={() => onToggle(task.id)}
     >
       <h3>
