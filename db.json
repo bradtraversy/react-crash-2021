@@ -4,10 +4,11 @@
       "id": 1,
       "text": "Doctors Appointment",
       "day": "Feb 5th at 2:30pm",
-      "reminder": false,
+      "reminder": true,
       "work": false,
       "school": false,
-      "other": true
+      "other": true,
+      "important": true
     },
     {
       "id": 2,
@@ -16,16 +17,25 @@
       "reminder": true,
       "work": false,
       "school": true,
-      "other": false
+      "other": false,
+      "important": true
     },
     {
       "text": "e",
       "day": "eee",
-      "reminder": false,
+      "reminder": true,
       "work": true,
       "school": false,
       "other": false,
-      "id": 3
+      "id": 3,
+      "important": true
+    },
+    {
+      "text": "zdfs",
+      "day": "dfsdfsdf",
+      "reminder": true,
+      "important": true,
+      "id": 4
     }
   ]
 }
