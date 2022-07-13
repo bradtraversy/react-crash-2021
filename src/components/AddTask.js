@@ -3,10 +3,9 @@ import { useState } from 'react'
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('')
   const [day, setDay] = useState('')
-  const [reminder, setReminder] = useState(false)
-  const [work, setWork] = useState(false)
-  const [school, setSchool] = useState(false)
-  const [other, setOther] = useState(false)
+  const [reminder, setReminder,] = useState(false)
+  const [important, setImportant] = useState(false)
+
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -16,14 +15,12 @@ const AddTask = ({ onAdd }) => {
       return
     }
 
-    onAdd({text, day, reminder, work, school, other})
+    onAdd({ text, day, reminder, important })
 
     setText('')
     setDay('')
     setReminder(false)
-    setWork(false)
-    setSchool(false)
-    setOther(false)
+    setImportant(false)
   }
 
   return (
@@ -54,28 +51,20 @@ const AddTask = ({ onAdd }) => {
           value={reminder}
           onChange={(e) => setReminder(e.currentTarget.checked)}
         />
-      </div>
+        </div>
+      
       <div className='form-control form-control-check'>
-            <label className = 'work-label'>Set Work</label>
-            <input type='checkbox'
-            checked={work} 
-            value={work} 
-            onChange={(e) => setWork(e.currentTarget.checked)}/>
-        </div>
-        <div className='form-control form-control-check'>
-            <label className = 'school-label'>Set School</label>
-            <input type='checkbox'
-            checked={school} 
-            value={school} 
-            onChange={(e) => setSchool(e.currentTarget.checked)}/>
-        </div>
-        <div className='form-control form-control-check'>
-            <label className = 'other-label'>Set Other</label>
-            <input type='checkbox'
-            checked={other} 
-            value={other} 
-            onChange={(e) => setOther(e.currentTarget.checked)}/>
-        </div>
+
+        <label>Mark as Important</label>
+        <input
+        type = 'checkbox'
+        checked={important}
+        value={important}
+        onChange={(e) => setImportant(e.currentTarget.checked)}
+        />
+
+      </div>
+      
 
       <input type='submit' value='Save Task' className='btn btn-block' />
     </form>

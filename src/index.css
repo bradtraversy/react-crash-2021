@@ -65,28 +65,8 @@ body {
   border-left: 5px solid green;
 }
 
-.task.work {
-  border-right: 5px solid red;
-}
-
-.task.school {
-  border-right: 5px solid orange;
-}
-
-.task.other {
-  border-right: 5px solid blue;
-}
-
-.task.reminder.work {
-  border-right: 5px solid red;
-}
-
-.task.reminder.school {
-  border-right: 5px solid orange;
-}
-
-.task.reminder.other {
-  border-right: 5px solid blue;
+.task.important {
+  border-right: 5px solid gold;
 }
 
 .task h3 {
@@ -128,18 +108,6 @@ body {
 .form-control-check input {
   flex: 2;
   height: 20px;
-}
-
-.work-label {
-  color: red;
-}
-
-.school-label {
-  color: orange;
-}
-
-.other-label {
-  color: blue;
 }
 
 footer {

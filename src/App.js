@@ -49,17 +49,14 @@ const App = () => {
 
     setTasks([...tasks, data])
 
-    // const id = Math.floor(Math.random() * 10000) + 1
-    // const newTask = { id, ...task }
-    // setTasks([...tasks, newTask])
+
   }
 
-  // Delete Task
+  // Delete Task~
   const deleteTask = async (id) => {
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'DELETE',
     })
-    //We should control the response status to decide if we will change the state or not.
     res.status === 200
       ? setTasks(tasks.filter((task) => task.id !== id))
       : alert('Error Deleting This Task')
@@ -80,12 +77,42 @@ const App = () => {
 
     const data = await res.json()
 
+
+
     setTasks(
       tasks.map((task) =>
         task.id === id ? { ...task, reminder: data.reminder } : task
       )
     )
   }
+  
+  // Toggle Important
+  const toggleImportant = async (id) => {
+    const taskToToggle = await fetchTask(id)
+    const updTask = { ...taskToToggle, important: !taskToToggle.impor }
+
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(updTask),
+    })
+
+    const data = await res.json()
+
+
+
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, important: data.important } : task
+      )
+    )
+  }
+
+
+
+
 
   return (
     <Router>
@@ -105,6 +132,8 @@ const App = () => {
                     tasks={tasks}
                     onDelete={deleteTask}
                     onToggle={toggleReminder}
+                    onTurn={toggleImportant}
+                    
                   />
                 ) : (
                   'No Tasks To Show'

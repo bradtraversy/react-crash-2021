@@ -1,33 +1,36 @@
-import { FaTimes } from 'react-icons/fa'
+import { FaInfo, FaTimes } from 'react-icons/fa'
 
-const Task = ({ task, onDelete, onToggle }) => {
-  let cName = '';//set side border color
-  if (task.reminder === true) {
-      if (task.work === true) {cName = 'reminder work'}
-      if (task.school === true) {cName = 'reminder school'}
-      if (task.other === true) {cName = 'reminder other'}
-  }
-  else {
-    if (task.work === true) {cName = 'work'}
-    if (task.school === true) {cName = 'school'}
-    if (task.other === true) {cName = 'other'}
-  }
-
+const Task = ({ task, onDelete, onToggle, onTurn }) => {
   return (
     <div
-      className={`task ${cName}`}
-      onDoubleClick={() => onToggle(task.id)}
+    className={`task ${task.reminder && 'reminder'}`}      
+    onDoubleClick={() => onToggle(task.id)}
+    
+
     >
+    <div
+    className={`task ${task.important && 'important'}`}      
+    onClick={() => onTurn(task.id)}
+    
+//{Icons for delete and important}
+    ></div>
+
+    
       <h3>
         {task.text}{' '}
         <FaTimes
           style={{ color: 'red', cursor: 'pointer' }}
           onClick={() => onDelete(task.id)}
+          
+        />
+
+       <FaInfo
+          style={{ color: 'grey', cursor: 'pointer' }}
+          
+          
         />
       </h3>
       <p>{task.day}</p>
-      <h6>{task.category}</h6>
-
     </div>
   )
 }
