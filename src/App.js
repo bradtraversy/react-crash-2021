@@ -89,7 +89,7 @@ const App = () => {
   // Toggle Important
   const toggleImportant = async (id) => {
     const taskToToggle = await fetchTask(id)
-    const updTask = { ...taskToToggle, important: !taskToToggle.impor }
+    const updTask = { ...taskToToggle, important: !taskToToggle.important}
 
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'PUT',
