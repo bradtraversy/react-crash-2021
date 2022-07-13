@@ -8,7 +8,7 @@
       "work": false,
       "school": false,
       "other": true,
-      "important": true
+      "important": false
     },
     {
       "id": 2,
@@ -21,9 +21,10 @@
       "important": true
     },
     {
-      "text": "e",
-      "day": "eee",
+      "text": "hes",
+      "day": "yes",
       "reminder": true,
+      "important": true,
       "work": true,
       "school": false,
       "other": false,
