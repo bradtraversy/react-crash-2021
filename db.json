@@ -2,24 +2,41 @@
   "tasks": [
     {
       "id": 1,
+      "text": "Doctors Appointment",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true,
+      "work": false,
+      "school": false,
+      "other": true,
+      "important": false
+    },
+    {
+      "id": 2,
       "text": "Meeting at School",
       "day": "Feb 6th at 1:30pm",
-      "reminder": false,
-      "description": "behind the main building"
-    },
-    {
-      "text": "Test Task 1",
-      "day": "Within 3-5 business days",
       "reminder": true,
-      "description": "Got too ambitious...",
-      "id": 2
+      "work": false,
+      "school": true,
+      "other": false,
+      "important": true
     },
     {
-      "text": "a",
-      "day": "a",
-      "reminder": false,
-      "description": "\nef\nsd\nf\ne\nfs\nf\nesf",
-      "id": 3
+      "text": "hes",
+      "day": "yes",
+      "reminder": true,
+      "important": true,
+      "work": true,
+      "school": false,
+      "other": false,
+      "id": 3,
+      "important": true
+    },
+    {
+      "text": "zdfs",
+      "day": "dfsdfsdf",
+      "reminder": true,
+      "important": true,
+      "id": 4
     }
   ]
 }
