@@ -1,5 +1,6 @@
 import { FaExclamation, FaTimes } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, } from 'react';
+import { Link } from 'react-router-dom'
 
 const Task = ({ task, onDelete, onToggle, onTurn }) => {
 
@@ -26,6 +27,9 @@ const Task = ({ task, onDelete, onToggle, onTurn }) => {
           {task.text}
         </h3>
         <p>{task.day}</p>
+        <div>
+          <Link to='/details' state={task.description}>Details</Link>
+        </div>
         <h6>{under}</h6>
       </div>
       <div style={{ display:'flex', flexDirection: 'column', justifyContent: 'space-between' }}>

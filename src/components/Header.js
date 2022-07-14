@@ -5,16 +5,17 @@ import Button from './Button'
 const Header = ({ title, onAdd, showAdd }) => {
   const location = useLocation()
 
-  return (
+   //decides what the header title should be based off of the current url
+   return (
     <header className='header'>
-      <h1>{title}</h1>
-      {location.pathname === '/' && (
-        <Button
-          color={showAdd ? 'red' : 'green'}
-          text={showAdd ? 'Close' : 'Add'}
-          onClick={onAdd}
-        />
-      )}
+      <h1>
+        {location.pathname === '/details' ? title = 'Description Of Task' : title = 'Task Manager'}
+      </h1>
+      {location.pathname === '/' && (<Button 
+        color={showAdd ? 'red' : 'green'} 
+        text={showAdd ? 'Close' : 'Add'} 
+        onClick={onAdd}
+      />)}
     </header>
   )
 }

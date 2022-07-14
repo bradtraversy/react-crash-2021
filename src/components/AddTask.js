@@ -8,6 +8,7 @@ const AddTask = ({ onAdd }) => {
   const [work, setWork] = useState(false)
   const [school, setSchool] = useState(false)
   const [other, setOther] = useState(false)
+  const [description, setDetail] = useState('')
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -47,6 +48,12 @@ const AddTask = ({ onAdd }) => {
           value={day}
           onChange={(e) => setDay(e.target.value)}
         />
+      </div>
+      <div className='form-control'>
+        <label>
+          Description
+        </label>
+        <textarea value={description} onChange={(e) => setDetail(e.target.value)} /> 
       </div>
       <div className='form-control form-control-check'>
         <label>Set Reminder</label>
