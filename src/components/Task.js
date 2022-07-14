@@ -1,4 +1,5 @@
-import { FaInfo, FaTimes } from 'react-icons/fa'
+import { FaExclamation, FaTimes } from 'react-icons/fa';
+import { useState } from 'react';
 
 const Task = ({ task, onDelete, onToggle, onTurn }) => {
 
@@ -10,36 +11,34 @@ const Task = ({ task, onDelete, onToggle, onTurn }) => {
   let under = cName;
   if (task.reminder === true) {cName = 'reminder ' + cName}
 
+  const [important, setImportant] = useState(task.important);
+
+  const toggleImportant = (id) => {
+    setImportant(!important);
+    onTurn(id);
+  }
+
 
   return (
-    <div
-    className={`task ${cName}`}      
-    onDoubleClick={() => onToggle(task.id)}
-    
-
-    >
-    <div
-    className={`task ${task.important && 'important'}`}      
-    onClick={() => onTurn(task.id)}
-    
-//{Icons for delete and important}
-    ></div>
-      <h3>
-        {task.text}{' '}
+    <div className={`task ${cName}`} onDoubleClick={() => onToggle(task.id)} onClick={() => toggleImportant(task.id)}>
+      <div>
+        <h3>
+          {task.text}
+        </h3>
+        <p>{task.day}</p>
+        <h6>{under}</h6>
+      </div>
+      <div style={{ display:'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <FaTimes
           style={{ color: 'red', cursor: 'pointer' }}
-          onClick={() => onDelete(task.id)}
-          
+          onClick={() => onDelete(task.id)} 
         />
-
-       <FaInfo
-          style={{ color: 'grey', cursor: 'pointer' }}
-          
-          
-        />
-      </h3>
-      <p>{task.day}</p>
-      <h6>{under}</h6>
+        <div className={ important ? 'important' : 'unimportant' }>
+          <FaExclamation
+            style={{ color: 'orange', cursor: 'pointer' }}
+          />
+        </div>
+      </div>
     </div>
   )
 }

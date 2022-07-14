@@ -55,18 +55,21 @@ body {
 }
 
 .task {
+  display: flex;
+  justify-content: space-between;
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  border-right: 5px solid #f4f4f4;
 }
 
 .task.reminder {
   border-left: 5px solid green;
 }
 
-.task.important {
-  border-right: 5px solid gold;
+.unimportant {
+  display:none;
 }
 
 .task.work {

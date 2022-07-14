@@ -8,7 +8,7 @@
       "work": false,
       "school": false,
       "other": true,
-      "important": false
+      "important": true
     },
     {
       "id": 2,
@@ -18,23 +18,22 @@
       "work": false,
       "school": true,
       "other": false,
-      "important": true
+      "important": false
     },
     {
       "text": "hes",
       "day": "yes",
       "reminder": true,
-      "important": true,
+      "important": false,
       "work": true,
       "school": false,
       "other": false,
-      "id": 3,
-      "important": true
+      "id": 3
     },
     {
       "text": "zdfs",
       "day": "dfsdfsdf",
-      "reminder": true,
+      "reminder": false,
       "important": true,
       "id": 4
     }
