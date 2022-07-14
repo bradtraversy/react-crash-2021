@@ -68,10 +68,6 @@ body {
   border-left: 5px solid green;
 }
 
-.unimportant {
-  display:none;
-}
-
 .task.work {
   border-right: 5px solid red;
 }

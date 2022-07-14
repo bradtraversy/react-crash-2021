@@ -21,7 +21,7 @@ const Task = ({ task, onDelete, onToggle, onTurn }) => {
 
 
   return (
-    <div className={`task ${cName}`} onDoubleClick={() => onToggle(task.id)} onClick={() => toggleImportant(task.id)}>
+    <div className={`task ${cName}`} onDoubleClick={() => onToggle(task.id)}>
       <div>
         <h3>
           {task.text}
@@ -37,9 +37,10 @@ const Task = ({ task, onDelete, onToggle, onTurn }) => {
           style={{ color: 'red', cursor: 'pointer' }}
           onClick={() => onDelete(task.id)} 
         />
-        <div className={ important ? 'important' : 'unimportant' }>
+        <div>
           <FaExclamation
-            style={{ color: 'orange', cursor: 'pointer' }}
+            style={{ color: `${important ? 'orange' : 'gray'}`, cursor: 'pointer' }}
+            onClick={() => toggleImportant(task.id)}
           />
         </div>
       </div>
