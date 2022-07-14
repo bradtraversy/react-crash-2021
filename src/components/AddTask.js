@@ -18,7 +18,7 @@ const AddTask = ({ onAdd }) => {
       return
     }
 
-    onAdd({ text, day, reminder, important, work, school, other })
+    onAdd({ text, day, reminder, important, work, school, other, description })
 
     setText('')
     setDay('')
@@ -27,6 +27,7 @@ const AddTask = ({ onAdd }) => {
     setWork(false)
     setSchool(false)
     setOther(false)
+    setDetail('')
   }
 
   return (

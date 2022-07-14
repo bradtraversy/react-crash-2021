@@ -1,25 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": 1,
-      "text": "Doctors Appointment",
-      "day": "Feb 5th at 2:30pm",
-      "reminder": false,
-      "work": false,
-      "school": false,
-      "other": true,
-      "important": true,
-      "description": "Gums hurt"
-    },
-    {
-      "text": "test",
-      "day": "test2",
-      "reminder": true,
-      "important": true,
-      "work": true,
-      "school": true,
-      "other": true,
-      "id": 2
-    }
-  ]
+  "tasks": []
 }
