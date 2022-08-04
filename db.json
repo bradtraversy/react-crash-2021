@@ -1,22 +1,22 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Doctors Appointment",
-      "day": "Feb 5th at 2:30pm",
-      "reminder": true
-    },
-    {
-      "id": 2,
-      "text": "Meeting at School",
-      "day": "Feb 6th at 1:30pm",
-      "reminder": true
-    },
-    {
-      "text": "123",
-      "day": "123",
+      "text": "watch the full course about react 2021",
+      "day": "",
       "reminder": false,
-      "id": 3
+      "id": 4
+    },
+    {
+      "text": "learn freeRADIUS",
+      "day": "TILL 1 OF AUGUST",
+      "reminder": false,
+      "id": 6
+    },
+    {
+      "text": "UPDATE bnet certs ",
+      "day": "till 8 of August",
+      "reminder": false,
+      "id": 7
     }
   ]
 }

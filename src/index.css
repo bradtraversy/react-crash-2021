@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
+.centered {
+  justify-content: center; /* center items horizontally, in this case */
+  align-items: center;     /* center items vertically, in this case */
+  display: flex;
+}
+
+.sun {
+  display:flex;
+  justify-content: center; /* center items horizontally, in this case */
+  align-items: center;     /* center items vertically, in this case */
+  border-radius:50%;
+  height:200px;
+  width:200px;
+  background:orange;
+  box-shadow: 0 0 10px orange,
+                0 0 60px orange,
+                0 0 200px yellow,
+                inset 0 0 80px yellow;
+  z-index:12;
+  z-index:-99;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
