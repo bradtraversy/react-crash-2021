@@ -6,6 +6,8 @@ import Footer from './components/Footer'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 import About from './components/About'
+import Moon from './components/Moon'
+
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -91,6 +93,7 @@ const App = () => {
   return (
     <Router>
       <div className='container'>
+        <Moon/>
         <Header
           onAdd={() => setShowAddTask(!showAddTask)}
           showAdd={showAddTask}

@@ -3,18 +3,24 @@
     {
       "text": "watch the full course about react 2021",
       "day": "",
-      "reminder": false,
+      "reminder": true,
       "id": 4
     },
     {
-      "text": "learn freeRADIUS",
-      "day": "TILL 1 OF AUGUST",
+      "text": "Сходить на секонд хенд",
+      "day": "Когда будут деньги",
+      "reminder": true,
+      "id": 5
+    },
+    {
+      "text": "Купить Игорю трусы и футболки",
+      "day": "Когда будут деньги",
       "reminder": false,
       "id": 6
     },
     {
-      "text": "UPDATE bnet certs ",
-      "day": "till 8 of August",
+      "text": "Купить даше сумку с гарри поттером розовую",
+      "day": "Раньше чем она поедет в Гданск",
       "reminder": false,
       "id": 7
     }
