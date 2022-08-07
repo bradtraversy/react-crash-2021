@@ -28,7 +28,7 @@
   padding: 0;
 }
 
-
+/* sources https://unsplash.com/photos/c9OCWLka764 */
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -39,6 +39,9 @@ body {
   background: #0c0c2b;
   animation: tothetop 4s forwards;
   animation-delay: 3s;
+  background-image: url('imgs/maxsky.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -49,6 +52,7 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+  background-color: #313133a4;
 }
 
 .header {
@@ -347,3 +351,19 @@ h1,h3,p,label {
   color: white;
   font-family: Sail;
 }
+
+img{
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+}
+
+/* .bplanet {
+  background-image: url("imgs/IMG_7847.PNG");
+  height: 100px;
+  width: 100px;
+  
+} */

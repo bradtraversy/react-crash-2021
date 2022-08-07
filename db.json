@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "text": "watch the full course about react 2021",
-      "day": "",
-      "reminder": true,
-      "id": 4
-    },
-    {
       "text": "Сходить на секонд хенд",
       "day": "Когда будут деньги",
       "reminder": true,
@@ -23,6 +17,24 @@
       "day": "Раньше чем она поедет в Гданск",
       "reminder": false,
       "id": 7
+    },
+    {
+      "text": "Купить колоду затмение амири",
+      "day": "",
+      "reminder": false,
+      "id": 8
+    },
+    {
+      "text": "Больше звезд которие падают",
+      "day": "",
+      "reminder": false,
+      "id": 9
+    },
+    {
+      "text": "Метеорити которие падают",
+      "day": "",
+      "reminder": false,
+      "id": 10
     }
   ]
 }
