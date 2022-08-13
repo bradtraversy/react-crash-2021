@@ -13,6 +13,7 @@
   border-radius:50%;
   height:200px;
   width:200px;
+  right: 100px;
   background:orange;
   box-shadow: 0 0 10px orange,
                 0 0 60px orange,
@@ -36,21 +37,21 @@ body {
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
-  background: #0c0c2b;
-  animation: tothetop 4s forwards;
-  animation-delay: 3s;
-  background-image: url('imgs/maxsky.jpg');
+  background-image: url('imgs/paul-volkmer-qVotvbsuM_c-unsplash.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
+  background-size: 250vh 100vh;
+
+  
 }
 
 .container {
-  max-width: 500px;
-  margin: 30px auto;
+  max-width: 66vh;
+  margin: 1px auto;
   overflow: auto;
   min-height: 300px;
   border: 1px solid steelblue;
-  padding: 30px;
+  padding: 1px;
   border-radius: 5px;
   background-color: #313133a4;
 }
@@ -296,6 +297,51 @@ li:nth-child(7) {
   left: 60%;
 }
 
+.p-11{
+  animation-duration:7s;
+  left: 10%;
+}
+.p-21{
+  animation-duration:5s;
+  top:60%;
+  left: 40%;
+}
+.p-31{
+  animation-duration:11s;
+  top:90%;
+  left: 60%;
+}
+
+.p-41{
+  animation-duration:4s;
+  left: 25%;
+}
+.p-51{
+  animation-duration:2s;
+  top:30%;
+  left: 20%;
+}
+.p-61{
+  animation-duration:1s;
+  top:33%;
+  left: 10%;
+}
+
+.p-71{
+  animation-duration:4s;
+  left: 50%;
+}
+.p-81{
+  animation-duration:1s;
+  top:10%;
+  left: 30%;
+}
+.p-91{
+  animation-duration:4s;
+  top:40%;
+  left: 60%;
+}
+
 h1,h3,p,label {
   color: whitesmoke;
 }
@@ -367,3 +413,19 @@ img{
   width: 100px;
   
 } */
+
+.background-fullviewport{
+  right: -50vh;
+  width: 100vh;
+  padding: 20px;
+  height: 0;
+
+}
+
+h1{
+  padding: 1vh;
+}
+
+@media screen and (max-width: 992px) {
+
+}

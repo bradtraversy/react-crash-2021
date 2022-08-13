@@ -12,6 +12,15 @@ const Stars = () => {
     <div className='p p-7'></div>
     <div className='p p-8'></div>
     <div className='p p-9'></div>
+    <div className='p p-11'></div>
+    <div className='p p-21'></div>
+    <div className='p p-31'></div>
+    <div className='p p-41'></div>
+    <div className='p p-51'></div>
+    <div className='p p-61'></div>
+    <div className='p p-71'></div>
+    <div className='p p-81'></div>
+    <div className='p p-91'></div>
     </div>
   )
 }
