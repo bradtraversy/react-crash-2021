@@ -8,6 +8,7 @@ import AddTask from './components/AddTask'
 import About from './components/About'
 import Moon from './components/Moon'
 import Sun from './components/Sun'
+import Navbar from './components/Navbar'
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -93,6 +94,7 @@ const App = () => {
   return (
     <Router>
       <div>
+      <Navbar/>
       <Sun/>
       
       <div className='container'>

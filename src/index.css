@@ -6,6 +6,10 @@
   display: flex;
 }
 
+a{
+  color: white;
+}
+
 .sun {
   display:flex;
   justify-content: center; /* center items horizontally, in this case */
@@ -428,4 +432,8 @@ h1{
 
 @media screen and (max-width: 992px) {
 
+}
+
+#logo{
+  max-height: 100px;
 }
