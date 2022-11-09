@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
@@ -5,6 +6,9 @@ import Footer from './components/Footer'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 import About from './components/About'
+import Moon from './components/Moon'
+import Sun from './components/Sun'
+import Navbar from './components/Navbar'
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -89,7 +93,13 @@ const App = () => {
 
   return (
     <Router>
+      <div>
+      <Navbar/>
+      <Sun/>
+      
       <div className='container'>
+        
+        <Moon/>
         <Header
           onAdd={() => setShowAddTask(!showAddTask)}
           showAdd={showAddTask}
@@ -115,6 +125,7 @@ const App = () => {
           <Route path='/about' element={<About />} />
         </Routes>
         <Footer />
+      </div>
       </div>
     </Router>
   )
