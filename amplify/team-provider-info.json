@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-candlelit-dev-222916-authRole",
+      "UnauthRoleArn": "arn:aws:iam::078622553377:role/amplify-candlelit-dev-222916-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::078622553377:role/amplify-candlelit-dev-222916-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-candlelit-dev-222916-deployment",
+      "UnauthRoleName": "amplify-candlelit-dev-222916-unauthRole",
+      "StackName": "amplify-candlelit-dev-222916",
+      "StackId": "arn:aws:cloudformation:eu-west-1:078622553377:stack/amplify-candlelit-dev-222916/860e5470-5865-11ec-8fba-0645d414a181",
+      "AmplifyAppId": "d2pe3qh5rec1xj"
+    }
+  }
+}
