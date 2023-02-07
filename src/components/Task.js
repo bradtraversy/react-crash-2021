@@ -1,19 +1,49 @@
-import { FaTimes } from 'react-icons/fa'
+import { FaExclamation, FaTimes } from 'react-icons/fa';
+import { useState, } from 'react';
+import { Link } from 'react-router-dom'
 
-const Task = ({ task, onDelete, onToggle }) => {
+const Task = ({ task, onDelete, onToggle, onTurn }) => {
+
+  let cName = '';
+    if (task.work === true) {cName = 'work'}
+    if (task.school === true) {cName = 'school'}
+    if (task.other === true) {cName = 'other'}
+
+  let under = cName;
+  if (task.reminder === true) {cName = 'reminder ' + cName}
+
+  const [important, setImportant] = useState(task.important);
+
+  const toggleImportant = (id) => {
+    setImportant(!important);
+    onTurn(id);
+  }
+
+
   return (
-    <div
-      className={`task ${task.reminder && 'reminder'}`}
-      onDoubleClick={() => onToggle(task.id)}
-    >
-      <h3>
-        {task.text}{' '}
+    <div className={`task ${cName}`} onDoubleClick={() => onToggle(task.id)}>
+      <div>
+        <h3>
+          {task.text}
+        </h3>
+        <p>{task.day}</p>
+        <div>
+          <Link to='/details' state={task.description}>Details</Link>
+        </div>
+        <h6>{under}</h6>
+      </div>
+      <div style={{ display:'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <FaTimes
           style={{ color: 'red', cursor: 'pointer' }}
-          onClick={() => onDelete(task.id)}
+          onClick={() => onDelete(task.id)} 
         />
-      </h3>
-      <p>{task.day}</p>
+        <div>
+          <FaExclamation
+            style={{ color: `${important ? 'orange' : 'gray'}`, cursor: 'pointer' }}
+            onClick={() => toggleImportant(task.id)}
+          />
+        </div>
+      </div>
     </div>
   )
 }

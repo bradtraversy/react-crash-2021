@@ -55,14 +55,41 @@ body {
 }
 
 .task {
+  display: flex;
+  justify-content: space-between;
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  border-right: 5px solid #f4f4f4;
 }
 
 .task.reminder {
   border-left: 5px solid green;
+}
+
+.task.work {
+  border-right: 5px solid red;
+}
+
+.task.school {
+  border-right: 5px solid orange;
+}
+
+.task.other {
+  border-right: 5px solid blue;
+}
+
+.task.reminder.work {
+  border-right: 5px solid red;
+}
+
+.task.reminder.school {
+  border-right: 5px solid orange;
+}
+
+.task.reminder.other {
+  border-right: 5px solid blue;
 }
 
 .task h3 {
@@ -104,6 +131,18 @@ body {
 .form-control-check input {
   flex: 2;
   height: 20px;
+}
+
+.work-label {
+  color: red;
+}
+
+.school-label {
+  color: orange;
+}
+
+.other-label {
+  color: blue;
 }
 
 footer {
