@@ -48,6 +48,7 @@ const App = () => {
     const data = await res.json()
 
     setTasks([...tasks, data])
+    // this is first commet
 
     // const id = Math.floor(Math.random() * 10000) + 1
     // const newTask = { id, ...task }
